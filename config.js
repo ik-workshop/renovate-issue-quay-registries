@@ -15,7 +15,11 @@ module.exports = {
   "baseBranches": ["master", "main"],
   "enabledManagers": ["cloudbuild", "dockerfile", "regex"],
   "packageRules": [
-
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["quay.io/helmpack/chart-testing"],
+      "versioning": "loose"
+    },
   ],
   "regexManagers": [
     {

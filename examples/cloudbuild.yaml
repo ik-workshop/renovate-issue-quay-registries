@@ -3,6 +3,3 @@ steps:
   # https://quay.io/repository/coreos/kube-state-metrics?tab=history
   - name: quay.io/coreos/kube-state-metrics:v1.9.8
     args: [lint]
-  # https://quay.io/repository/coreos/kube-state-metrics?tab=history
-  - name: quay.io/helmpack/chart-testing:v2.4.1
-    args: [ct, lint, --all, --debug, --chart-dirs, charts]
