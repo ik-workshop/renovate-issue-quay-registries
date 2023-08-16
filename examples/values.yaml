@@ -1,5 +1,4 @@
 
-
-images:
-  - repository: quay.io/helmpack/chart-testing
-    tag: "v2.4.1"
+image:
+  repository: quay.io/helmpack/chart-testing
+  tag: "v2.4.1"

@@ -13,7 +13,7 @@ module.exports = {
   "onboarding": false,
   "requireConfig": "optional",
   "baseBranches": ["master", "main"],
-  "enabledManagers": ["cloudbuild", "dockerfile", "regex"],
+  "enabledManagers": ["cloudbuild", "dockerfile", "regex", "helmv3", "helm-values"],
   "packageRules": [
     // {
     //   "matchDatasources": ["docker"],
