@@ -52,6 +52,10 @@ quay.io configuration
 
 ```
 $ curl -sv https://quay.company.com/v2/auth?service=quay.company.com&scope=repository:repo/org:pull
+$ skopeo list-tags --no-creds docker://quay.io/jetstack/cert-manager-controller
+$ skopeo list-tags --no-creds docker://quay.io/coreos/kube-state-metrics
+$ skopeo list-tags --no-creds docker://quay.io/helmpack/chart-testing
+$ skopeo list-tags --no-creds docker://quay.io/argoproj/argocd
 ```
 
 ### Renovate Docs

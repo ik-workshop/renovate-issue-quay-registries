@@ -1,4 +1,5 @@
 
 image:
+  # https://quay.io/repository/jetstack/cert-manager-controller?tab=tags
   repository: quay.io/jetstack/cert-manager-controller
   tag: "v1.4.0"
