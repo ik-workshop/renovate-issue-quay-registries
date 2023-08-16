@@ -18,6 +18,26 @@
 
 ## Issue
 
+quay.io configuration
+
+```json
+{
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "https://quay.io/v2/",
+      "username": "usr",
+      "password": "apitoken"
+    },
+    {
+      "hostType": "docker",
+      "matchHost": "https://quay.io/api/v1/",
+      "token": "apitoken"
+    }
+  ]
+}
+```
+
 ### Current result
 
 ### Expected result
@@ -44,24 +64,15 @@ $ curl -sv https://quay.company.com/v2/auth?service=quay.company.com&scope=repos
 
 - [Quay authentication issue (issue-10188)](https://github.com/renovatebot/renovate/discussions/10188)
 - [Self-Hosted quay enterprise support(Issue-13709)](https://github.com/renovatebot/renovate/discussions/13709)
-- [Quay authentication issue (issue-10188)](https://github.com/renovatebot/renovate/discussions/10188)
 - [Docker quay.io label fetching error (issue-4626)](https://github.com/renovatebot/renovate/issues/4626)
 
 ### Supporting Docs
 
 - [Example repo](https://github.com/MaronHatoum/renovate-4626/pull/6/files)
+- [Quay.io generate tokens](https://docs.quay.io/api/#generating-a-token-for-internal-application-use)
 
 ---
 
 <!-- resources -->
 [template.generate]: https://github.com/ik-workshop/renovate-issue-blueprint/generate
 [code-style.badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
-
-
-temp
-
-```
-  # https://quay.io/repository/coreos/kube-state-metrics?tab=history
-  - name: quay.io/helmpack/chart-testing:v2.4.1
-    args: [ct, lint, --all, --debug, --chart-dirs, charts]
-```

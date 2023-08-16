@@ -1,0 +1,49 @@
+{
+  "_url": "https://github.com/giokara/renovate-test/blob/master/renovate.json",
+  "extends": [
+    "config:base"
+  ],
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "https://quay.io/v2/",
+      "username": "giokara+robottest",
+      "password": "R5P6U8FFNTBJIIQWIPB0FC2MR0D7XZUJ2F3VI5YJZ65ZZJOQ02PNPASJ0917S8KQ"
+    },
+    {
+      "hostType": "docker",
+      "matchHost": "https://quay.io/api/v1/",
+      "token": "R5P6U8FFNTBJIIQWIPB0FC2MR0D7XZUJ2F3VI5YJZ65ZZJOQ02PNPASJ0917S8KQ"
+    }
+  ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "datasources": [
+        "docker"
+      ],
+      "managers": [
+        "dockerfile"
+      ],
+      "versioning": "semver",
+      "ignoreUnstable": false,
+      "enabled": true
+    }
+  ],
+  "git-submodules": {
+    "enabled": false
+  },
+  "npm": {
+    "enabled": false
+  },
+  "nvm": {
+    "enabled": false
+  },
+  "circleci": {
+    "enabled": false
+  },
+  "docker-compose": {
+    "enabled": false
+  },
+  "rebaseWhen": "conflicted"
+}
