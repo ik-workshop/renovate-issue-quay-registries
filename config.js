@@ -18,13 +18,11 @@ module.exports = {
   ],
   "regexManagers": [
     {
-      "description": "Update docker references in files",
-      "fileMatch": [".*"],
+      "fileMatch": [".*\/cloudbuild.yaml$"],
       "matchStrings": [
-        "image:\n *repository: (?<depName>.*?)\n *tag: (?<currentValue>[a-z0-9.-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
+        "name: (?<depName>.*):(?<currentValue>.*)"
       ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
+      "datasourceTemplate": "docker"
     }
   ]
 }
