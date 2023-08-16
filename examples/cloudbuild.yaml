@@ -1,5 +1,5 @@
 ---
 steps:
   # https://quay.io/repository/coreos/kube-state-metrics?tab=history
-  - name: quay.io/coreos/kube-state-metrics:v1.9.8
+  - name: quay.io/coreos/kube-state-metrics:v1.9.1
     args: [lint]

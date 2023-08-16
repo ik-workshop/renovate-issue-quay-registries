@@ -15,19 +15,24 @@ module.exports = {
   "baseBranches": ["master", "main"],
   "enabledManagers": ["cloudbuild", "dockerfile", "regex"],
   "packageRules": [
+    // {
+    //   "matchDatasources": ["docker"],
+    //   "matchPackageNames": ["quay.io/helmpack/chart-testing"],
+    //   "versioning": "loose"
+    // },
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["quay.io/helmpack/chart-testing"],
-      "versioning": "loose"
-    },
+      "matchPackageNames": ["quay.io/coreos/kube-state-metrics"],
+      "versioning": "regex:^v?(?<major>\\d+)\.(?<minor>\\d+)\.(?<patch>\\d+)$"
+    }
   ],
   "regexManagers": [
-    {
-      "fileMatch": [".*\/cloudbuild.yaml$"],
-      "matchStrings": [
-        "name: (?<depName>.*):(?<currentValue>.*)"
-      ],
-      "datasourceTemplate": "docker"
-    }
+    // {
+    //   "fileMatch": [".*\/cloudbuild.yaml$"],
+    //   "matchStrings": [
+    //     "name: (?<depName>.*):(?<currentValue>.*)"
+    //   ],
+    //   "datasourceTemplate": "docker"
+    // }
   ]
 }

@@ -56,3 +56,12 @@ $ curl -sv https://quay.company.com/v2/auth?service=quay.company.com&scope=repos
 <!-- resources -->
 [template.generate]: https://github.com/ik-workshop/renovate-issue-blueprint/generate
 [code-style.badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
+
+
+temp
+
+```
+  # https://quay.io/repository/coreos/kube-state-metrics?tab=history
+  - name: quay.io/helmpack/chart-testing:v2.4.1
+    args: [ct, lint, --all, --debug, --chart-dirs, charts]
+```
