@@ -13,6 +13,7 @@ module.exports = {
   "onboarding": false,
   "requireConfig": "optional",
   "baseBranches": ["master", "main"],
+  "enabledManagers": ["cloudbuild", "dockerfile", "regex"],
   "packageRules": [
 
   ],

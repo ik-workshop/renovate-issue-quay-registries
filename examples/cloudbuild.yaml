@@ -2,4 +2,5 @@
 steps:
   - name: quay.io/helmpack/chart-testing:v2.4.1
     args: [ct, lint, --all, --debug, --chart-dirs, charts]
-    
+  - name: quay.io/coreos/kube-state-metrics:v1.9.8
+    args: [version]
